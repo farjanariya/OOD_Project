@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta name="viewport" content="width-device-width, initial-scale-1.0" />
+    <title>TouristNest</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/homepage.css}" />
+  </head>
+  <body>
+    <h2 class="logo">TouristNest</h2>
+    <div class="header">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="http://localhost:8080/touristNest">HOME</a></li>
+          <li><a href="#">COUNTRY</a></li>
+          <li><a href="#">CITY</a></li>
+          <li><a href="#">FLIGHT</a></li>
+          <li><a href="#">HOTEL</a></li>
+        </ul>
+        <div>
+              <span th:if="${user}">
+                <div class="username" th:if="${user}" id="user">
+                  <a href="http://localhost:8080/user/profile" class="nametext">[[${user.name}]]</a>
+                </div>
+              </span>
+          <span th:unless="${user}">
+                <a href="http://localhost:8080/signin" class="reg-button">SIGN IN</a>
+              </span>
+        </div>
+      </nav>
+      <div>
+        <h2 class="text1">DISCOVERING</h2>
+        <h2 class="text2">THE WORLD</h2>
+        <h4 class="text3">
+          Tour and travel are more than just vacations;are experiences
+          <br />that open up a world of possibilities. Exploring new
+          destinations,<br />
+          cultures, and traditions broadens our outlook and provides<br />
+          unforgettable memories. Travel is a bridge that connects us to<br />
+          the rich tapestry of our planet,offering encounters with diverse<br />
+          people and breathtaking landscapes . . . . . . . . . . .
+        </h4>
+      </div>
+    </div>
+    <div>
+      <h2 class="features-title">Popular City</h2>
+      <ul class="image-features">
+        <li>
+          <a href="http://localhost:8080/touristNest/berlin"><img src="image/berlin.jpg" />
+            <span><h2>Berlin</h2></span>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="image/munich.jpg" />
+            <span>
+              <h2>Munich</h2>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="image/amsterdam.jpg" />
+            <span>
+              <h2>Amsterdam</h2>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="image/venice.jpg"/>
+            <span>
+              <h2>Venice</h2>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="image/zurich.jpg"/>
+            <span>
+              <h2>Zurich</h2>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="image/oslo.jpg"/>
+            <span>
+              <h2>Oslo</h2>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="image/lisbon.jpg"/>
+            <span>
+              <h2>Lisbon</h2>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="image/helsinki.jpg" />
+            <span>
+              <h2>Helsinki</h2>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="image/toronto.jpg"/>
+            <span>
+              <h2>Toronto</h2>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:8080/test"><img src="image/newyork.jpg"/>
+            <span>
+              <h2>New York</h2>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:8080/test"><img src="image/paris.jpg"/>
+            <span>
+              <h2>Paris</h2>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="http://localhost:8080/test"><img src="image/melbourn.jpg"/>
+            <span>
+              <h2>Melbourne</h2>
+            </span>
+          </a>
+        </li>
+        <!-- Add more images as needed -->
+      </ul>
+     <div class="viewButtton"><a href="http://localhost:8080/test"><button class="view-more-button">VIEW MORE</button></a></div>
+    </div>
+    <div>
+      <div>
+        <h2 class="features-title">Popular Country</h2>
+        <ul class="image-features" id="image-features">
+          <li>
+            <a href="#"><img src="image/switzerland.jpg" /><span><h2>Switzerland</h2></span></a>
+          </li>
+          <li>
+            <a href="#"><img src="image/italy.jpg" /><span><h2>Italy</h2></span></a>
+          </li>
+          <li>
+            <a href="#"><img src="image/norway.jpg" /><span><h2>Norway</h2></span></a>
+          </li>
+          <li>
+            <a href="#"><img src="image/franch.jpg" /><span><h2>France</h2></span></a>
+          </li>
+          <li>
+            <a href="#"><img src="image/germany.jpg" /><span><h2>Germany</h2></span></a>
+          </li>
+          <li>
+            <a href="#"><img src="image/netherland.jpg" /><span><h2>Netherlands</h2></span></a>
+          </li>
+          <li>
+            <a href="#"><img src="image/london.jpg" /><span><h2>United Kingdom</h2></span></a>
+          </li>
+          <li>
+            <a href="#"><img src="image/austria.jpg" /><span><h2>Austria</h2></span></a>
+          </li>
+        </ul>
+        <div class="viewButtton"><a href="http://localhost:8080/test"><button class="view-more-button">VIEW MORE</button></a></div>
+      </div>
+
+      <div>
+        <h2 class="features-title">Flight</h2>
+        <ul class="image-features">
+          <li>
+            <a href="#"><img src="image/qatarair.jpg" /><span><h2>Quatar Airlines</h2></span></a>
+          </li>
+          <li>
+            <a href="#"><img src="image/emiratesair.jpg" /><span><h2>Emirates Airlines</h2></span></a>
+          </li>
+          <li>
+            <a href="#"><img src="image/turkishair.jpg" /><span><h2>Turkish Airlines</h2></span></a>
+          </li>
+          <li>
+            <a href="#"><img src="image/ryanair.jpg" /><span><h2>Ryan Air</h2></span></a>
+          </li>
+        </ul>
+        <div class="viewButtton"><a href="http://localhost:8080/test"><button class="view-more-button">VIEW MORE</button></a></div>
+      </div>
+
+      <div class="help-container"></div>
+    </div>
+    </body>
+    
+</html>
